@@ -122,6 +122,7 @@ test('should work with `base-plugins`', function (done) {
 
 test('should emit error (when using `base-plugins`)', function (done) {
   var app = new Base()
+  app
     .on('error', function (err) {
       test.strictEqual(err instanceof Error, true)
       test.strictEqual(err.message, 'foo err bar')
