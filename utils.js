@@ -8,6 +8,7 @@ require = utils // eslint-disable-line no-undef, no-native-reassign
  * Lazily required module dependencies
  */
 
+require('is-valid-app', 'isValid')
 require('lazy-utils', 'utils')
 require = fn // eslint-disable-line no-undef, no-native-reassign
 

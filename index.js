@@ -39,7 +39,7 @@ var utils = require('./utils')
  */
 module.exports = function basePluginsEnhanced (options) {
   return function enhancedUseMethod (app) {
-    if (app.isRegistered('base-plugins-enhanced')) return
+    if (utils.isValid(app, 'base-plugins-enhanced')) return
 
     var originalUse = app.use.bind(app)
     app.options = utils.extend({}, app.options, options)
