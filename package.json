@@ -1,6 +1,6 @@
 {
   "name": "base-plugins-enhanced",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Error handling and extras for `.use` and `.run` methods of your Base apps. Modifies `.use` method to be able to 1) accept array of functions, 2) options object as second argument. Emits `error` event if some plugin fails.",
   "repository": "tunnckoCore/base-plugins-enhanced",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
