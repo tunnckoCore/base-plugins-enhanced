@@ -34,15 +34,23 @@
     "tasks": [
       "readme"
     ],
-    "lint": {
-      "reflinks": true
-    },
     "related": {
-      "list": []
+      "list": [
+        "base",
+        "base-plugins",
+        "base-option",
+        "use-ware",
+        "base-request"
+      ]
     },
     "reflinks": [
       "base",
-      "base-plugins"
-    ]
+      "base-plugins",
+      "use",
+      "ware"
+    ],
+    "lint": {
+      "reflinks": true
+    }
   }
 }

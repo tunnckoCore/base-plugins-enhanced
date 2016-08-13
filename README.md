@@ -105,6 +105,13 @@ console.log(app.options)
 // => { first: 'yes', multiple: true, aaa: 'bbb', }
 ```
 
+## Related
+- [base-option](https://www.npmjs.com/package/base-option): Adds a few options methods to base, like `option`, `enable` and `disable… [more](https://github.com/node-base/base-option) | [homepage](https://github.com/node-base/base-option "Adds a few options methods to base, like `option`, `enable` and `disable`. See the readme for the full API.")
+- [base-plugins](https://www.npmjs.com/package/base-plugins): Upgrade's plugin support in base applications to allow plugins to be called… [more](https://github.com/node-base/base-plugins) | [homepage](https://github.com/node-base/base-plugins "Upgrade's plugin support in base applications to allow plugins to be called any time after init.")
+- [base-request](https://www.npmjs.com/package/base-request): Plugin that adds `.request` and `.requestAll` methods to your [base][] applications for… [more](https://github.com/tunnckocore/base-request#readme) | [homepage](https://github.com/tunnckocore/base-request#readme "Plugin that adds `.request` and `.requestAll` methods to your [base][] applications for working with HTTP requests. Also can perform multiple requests on paged content - out of the box, if needed.")
+- [base](https://www.npmjs.com/package/base): base is the foundation for creating modular, unit testable and highly pluggable… [more](https://github.com/node-base/base) | [homepage](https://github.com/node-base/base "base is the foundation for creating modular, unit testable and highly pluggable node.js applications, starting with a handful of common methods, like `set`, `get`, `del` and `use`.")
+- [use-ware](https://www.npmjs.com/package/use-ware): Adds sync plugin support to your application. Kinda fork of [use… [more](https://github.com/tunnckocore/use-ware#readme) | [homepage](https://github.com/tunnckocore/use-ware#readme "Adds sync plugin support to your application. Kinda fork of [use][] - use it if you need to support nesting. Or use [ware][] if you need async middleware system.")
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/tunnckoCore/base-plugins-enhanced/issues/new).  
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.
@@ -115,6 +122,8 @@ But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 [base-plugins]: https://github.com/node-base/base-plugins
 [base]: https://github.com/node-base/base
+[use]: https://github.com/jonschlinkert/use
+[ware]: https://github.com/segmentio/ware
 
 [npmjs-url]: https://www.npmjs.com/package/base-plugins-enhanced
 [npmjs-img]: https://img.shields.io/npm/v/base-plugins-enhanced.svg?label=base-plugins-enhanced
