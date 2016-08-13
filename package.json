@@ -25,7 +25,22 @@
     "utils.js"
   ],
   "keywords": [
-    "base-plugins-enhanced"
+    "base",
+    "base-plugins-enhanced",
+    "baseplugin",
+    "context",
+    "enhanced",
+    "err",
+    "errors",
+    "extra",
+    "handling",
+    "plugin",
+    "plugins",
+    "run",
+    "sync",
+    "system",
+    "use",
+    "ware"
   ],
   "verb": {
     "run": true,
