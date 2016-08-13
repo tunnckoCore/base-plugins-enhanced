@@ -8,6 +8,7 @@
 'use strict'
 
 var test = require('mukla')
+var basePlugins = require('base-plugins')
 var plugins = require('./index')
 var Base = require('base')
 
@@ -97,7 +98,7 @@ test('should `.use` be able to accept array of functions', function (done) {
 test('should work with `base-plugins`', function (done) {
   var app = new Base()
   app
-    .use(require('base-plugins')())
+    .use(basePlugins())
     .use(plugins())
 
   app.use([
@@ -124,11 +125,12 @@ test('should emit error (when using `base-plugins`)', function (done) {
   var app = new Base()
   app
     .on('error', function (err) {
-      test.strictEqual(err instanceof Error, true)
+      test.ok(err)
       test.strictEqual(err.message, 'foo err bar')
+      test.ok((err instanceof Error) === true)
       done()
     })
-    .use(require('base-plugins')())
+    .use(basePlugins())
     .use(plugins())
     .use(function aaa (app) {
       return function (ctx) {
