@@ -92,7 +92,7 @@ app
     app.zzz = 'yyyy'
   }, { aaa: bbb })
 
-var obj = {a: 'b'}
+var obj = { charlike: 'mike' }
 app.run(obj)
 
 console.log(app.zzz)
@@ -102,7 +102,7 @@ console.log(obj)
 // => { foo: 'fooooo', bar: 'barrr', qux: 123 }
 
 console.log(app.options)
-// => { first: 'yes', multiple: true, aaa: 'bbb', }
+// => { first: 'yes', multiple: true, aaa: 'bbb', charlike: 'mike' }
 ```
 
 ## Related

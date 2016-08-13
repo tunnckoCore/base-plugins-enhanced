@@ -120,7 +120,7 @@ module.exports = function basePluginsEnhanced (options) {
        *     app.zzz = 'yyyy'
        *   }, { aaa: bbb })
        *
-       * var obj = {a: 'b'}
+       * var obj = { charlike: 'mike' }
        * app.run(obj)
        *
        * console.log(app.zzz)
@@ -130,7 +130,7 @@ module.exports = function basePluginsEnhanced (options) {
        * // => { foo: 'fooooo', bar: 'barrr', qux: 123 }
        *
        * console.log(app.options)
-       * // => { first: 'yes', multiple: true, aaa: 'bbb', }
+       * // => { first: 'yes', multiple: true, aaa: 'bbb', charlike: 'mike' }
        * ```
        *
        * @name   .run
