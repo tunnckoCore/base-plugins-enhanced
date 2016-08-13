@@ -36,6 +36,13 @@
     ],
     "lint": {
       "reflinks": true
-    }
+    },
+    "related": {
+      "list": []
+    },
+    "reflinks": [
+      "base",
+      "base-plugins"
+    ]
   }
 }
