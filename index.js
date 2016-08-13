@@ -38,5 +38,17 @@ module.exports = function basePluginsEnhanced (options) {
         return app
       }
     })
+
+    if (app.run) {
+      var originalRun = app.run.bind(app)
+      app.define('run', function run (val) {
+        try {
+          originalRun(val)
+        } catch (err) {
+          app.emit('error', err)
+        }
+        return app
+      })
+    }
   }
 }

@@ -94,3 +94,46 @@ test('should `.use` be able to accept array of functions', function (done) {
   done()
 })
 
+test('should work with `base-plugins`', function (done) {
+  var app = new Base()
+  app
+    .use(require('base-plugins')())
+    .use(plugins())
+
+  app.use([
+    function aaa (app) {
+      return function (ctx) {
+        ctx.aaa = 'bbb'
+      }
+    },
+    function bbb (app) {
+      return function (ctx) {
+        ctx.ccc = 'ddd'
+      }
+    }
+  ])
+  var foo = { foo: 'bar' }
+  app.run(foo)
+  test.strictEqual(foo.foo, 'bar')
+  test.strictEqual(foo.aaa, 'bbb')
+  test.strictEqual(foo.ccc, 'ddd')
+  done()
+})
+
+test('should emit error (when using `base-plugins`)', function (done) {
+  var app = new Base()
+    .on('error', function (err) {
+      test.strictEqual(err instanceof Error, true)
+      test.strictEqual(err.message, 'foo err bar')
+      done()
+    })
+    .use(require('base-plugins')())
+    .use(plugins())
+    .use(function aaa (app) {
+      return function (ctx) {
+        test.strictEqual(ctx.aaa, 111)
+        throw new Error('foo err bar')
+      }
+    })
+    .run({ aaa: 111 })
+})
