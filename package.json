@@ -1,0 +1,40 @@
+{
+  "name": "base-plugins-enhanced",
+  "version": "0.0.0",
+  "description": "Modifies the `.use` method of Base apps to accept array of functions, and options as second argument. Works with native `.use` and with `base-plugins`. In bonus it also wraps execution in try/catch block and emits `error` event.",
+  "repository": "tunnckoCore/base-plugins-enhanced",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "precommit.silent": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "standard && node test.js"
+  },
+  "dependencies": {
+    "lazy-cache": "^2.0.1",
+    "lazy-utils": "^1.0.1"
+  },
+  "devDependencies": {
+    "base": "^0.11.1",
+    "mukla": "^0.4.1",
+    "pre-commit": "*"
+  },
+  "files": [
+    "index.js",
+    "utils.js"
+  ],
+  "keywords": [
+    "base-plugins-enhanced"
+  ],
+  "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "lint": {
+      "reflinks": true
+    }
+  }
+}
