@@ -13,7 +13,7 @@ var plugins = require('./index')
 var Base = require('base')
 
 test('should `.use` be able to accept array of functions', function (done) {
-  var app = new Base()
+  var app = new Base({ isApp: true })
   app.use(plugins())
 
   // test multiple plugins in one `.use`
@@ -31,7 +31,7 @@ test('should `.use` be able to accept array of functions', function (done) {
 })
 
 test('should be able to pass options to each plugin', function (done) {
-  var app = new Base(null, { x: 'y' })
+  var app = new Base({ isApp: true }, { x: 'y' })
   app.use(plugins({ aa: 'aaa' }))
 
   // test options as second argument
@@ -59,7 +59,7 @@ test('should be able to pass options to each plugin', function (done) {
 })
 
 test('should emit `error` event when error occures', function (done) {
-  var app = new Base()
+  var app = new Base({ isApp: true })
   app
     .once('error', function (err) {
       test.strictEqual(err instanceof Error, true)
@@ -74,7 +74,7 @@ test('should emit `error` event when error occures', function (done) {
 })
 
 test('should `.use` be able to accept array of functions', function (done) {
-  var app = new Base()
+  var app = new Base({ isApp: true })
   var cnt = 0
 
   app.use(plugins())
@@ -96,7 +96,7 @@ test('should `.use` be able to accept array of functions', function (done) {
 })
 
 test('should work with `base-plugins`', function (done) {
-  var app = new Base()
+  var app = new Base({ isApp: true })
   app
     .use(basePlugins())
     .use(plugins())
@@ -122,7 +122,7 @@ test('should work with `base-plugins`', function (done) {
 })
 
 test('should emit error (when using `base-plugins`)', function (done) {
-  var app = new Base()
+  var app = new Base({ isApp: true })
   app
     .on('error', function (err) {
       test.ok(err)
