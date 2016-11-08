@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "is-valid-app": "^0.2.0",
-    "lazy-cache": "^2.0.1",
+    "lazy-cache": "^2.0.2",
     "lazy-utils": "^1.0.1"
   },
   "devDependencies": {
