@@ -19,7 +19,7 @@
     "base": "^0.11.1",
     "base-plugins": "^0.4.13",
     "mukla": "^0.4.1",
-    "pre-commit": "*"
+    "pre-commit": ">=1.1.3"
   },
   "files": [
     "index.js",
