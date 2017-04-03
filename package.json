@@ -16,7 +16,7 @@
     "lazy-utils": "^1.0.1"
   },
   "devDependencies": {
-    "base": "^0.11.1",
+    "base": "^0.13.0",
     "base-plugins": "^0.4.13",
     "mukla": "^0.4.1",
     "pre-commit": "*"
